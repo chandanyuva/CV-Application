@@ -1,12 +1,12 @@
-// import { useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
+import './app.css';
+import Unit from './components/Unit.jsx'
 
 function App() {
-  return (
-    <>
-      <h1>Hello, world</h1>
+    return <>
+    <Unit />
+    <Unit />
+    {/* need to check out form from basics in TOP */}
     </>
-  )
 }
 
 export default App
