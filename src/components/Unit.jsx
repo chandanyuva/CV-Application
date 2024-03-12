@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-export default function Unit (type="text"){
-    const [text,setText] = useState('');
-    function textUpdate (e){
-        setText(e.target.value);
-    }
-    return <div style={{display:"flex"}}>
-        <input type={type} onChange={textUpdate} className="input"></input>
-        <p className="output">{text}</p>
+// eslint-disable-next-line react/prop-types
+export default function Unit ({type="text",id}){
+    const [value,setValue] = useState('');
+    return <div 
+            style={{display:"flex"}}>
+        <label htmlFor={id}>{id}</label>
+        <input type={type} onChange={(e)=> setValue(e.target.value)} id={id}></input>
+        <p id={id} style={{marginLeft:"auto"}}>{value}</p>
     </div>
 }
