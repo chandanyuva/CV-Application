@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { DataEntry } from "./components/DataEntry";
-import { DataPrev } from "./components/DataPrev";
+import { DataEntry } from "./components/DataEntry/DataEntry";
+import { DataPrev } from "./components/DataPreview/DataPrev";
 import "./app.css";
 import { v4 as uuidv4 } from "uuid";
 // uuidv4();
@@ -9,7 +9,7 @@ function App() {
     const [data, setData] = useState({
         GeneralInfo: {
             name: "chandan",
-            email: "",
+            email: "chandan@12334.com",
             phNo: "",
         },
         EducationalInfo: {

@@ -1,8 +1,8 @@
+import InputModule from "../InputModule";
 
 function DataEntry (props){
     const modifierFun = props.mod;
-    // const General = props.data.GeneralInfo;
-    console.log(props);
+    // console.log(props);
     return <>
         <input type="text" 
                 value={props.data.GeneralInfo.name} 
@@ -11,7 +11,9 @@ function DataEntry (props){
                     const newData = {...props.data,GeneralInfo:newGeneralInfo};
                     modifierFun(newData)
                 }
-            }/>
+            }
+        />
+        <InputModule value={props.data.GeneralInfo.email} modifierFun = {props.mod} data={props.data}></InputModule>
     </>
 }
 
