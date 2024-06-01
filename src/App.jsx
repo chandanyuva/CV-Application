@@ -2,22 +2,22 @@ import { useState } from "react";
 import { DataEntry } from "./components/DataEntry/DataEntry";
 import { DataPrev } from "./components/DataPreview/DataPrev";
 import "./app.css";
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 // uuidv4();
 
 function App() {
     const [data, setData] = useState({
         GeneralInfo: {
-            name: "chandan",
-            email: "chandan@12334.com",
+            name: "",
+            email: "",
             phNo: "",
         },
         EducationalInfo: {
             schoolName: "",
             fieldOfStudy: "",
-            graduactionYear: "",
+            graduationYear: "",
         },
-        ExperenceInfo: {
+        ExperienceInfo: {
             company: "",
             position: "",
             noOfYears: "",
