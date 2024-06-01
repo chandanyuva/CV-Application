@@ -1,6 +1,5 @@
 export default function InputModule(props) {
     // console.log(props);
-
     function handleEvent(event, key) {
         // console.log(key)
         const newGeneralInfo = {
@@ -14,13 +13,27 @@ export default function InputModule(props) {
     // console.log(props.data[props.section][props.value]);
     return (
         <>
-            <input
+            <div className="row">
+                <label className="form-label col" htmlFor={props.value}>
+                    {`${props.value}:`}
+                </label>
+                <input
+                    className="form-control col"
+                    id={props.value}
+                    type={props.type}
+                    value={props.data[props.section][props.value]}
+                    onChange={(event) => {
+                        handleEvent(event, props.value);
+                    }}
+                />
+            </div>
+            {/* <input
                 type="text"
                 value={props.data[props.section][props.value]}
                 onChange={(event) => {
                     handleEvent(event, props.value);
                 }}
-            />
+            /> */}
         </>
     );
 }

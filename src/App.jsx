@@ -8,7 +8,7 @@ import "./app.css";
 function App() {
     const [data, setData] = useState({
         GeneralInfo: {
-            name: "",
+            Name: "",
             email: "",
             phNo: "",
         },
@@ -25,8 +25,12 @@ function App() {
     });
     return (
         <>
-            <DataEntry data={data} mod={setData}></DataEntry>
-            <DataPrev data={data}></DataPrev>
+            <div className="container ">
+                <div className="row">
+                    <DataEntry data={data} mod={setData}></DataEntry>
+                    <DataPrev data={data}></DataPrev>
+                </div>
+            </div>
         </>
     );
 }
